@@ -12,6 +12,8 @@
   <body>
 
     <div class="container mt-4 mb-2 w-50">
+      
+      
         <div class="card">
           @include('alertMessage')
 
@@ -54,9 +56,9 @@
 
                   <div class="form-group">
                     <label for=""><b>Password</b><span class="text-danger">*</span></label>
-                    <input type="text" name="" id="" class="form-control" placeholder="" aria-describedby="Enter password">
+                    <input type="text" name="password" id="" class="form-control" placeholder="" aria-describedby="Enter password">
                     <span class="text-danger">
-                        @error('email')
+                        @error('password')
                             {{$message}}
                         @enderror
                     </span>
@@ -64,9 +66,9 @@
 
                   <div class="form-group">
                     <label for=""><b>Confirm Password</b><span class="text-danger">*</span></label>
-                    <input type="text" name="" id="" class="form-control" placeholder="Enter Confirm password">
+                    <input type="text" name="confirm_password" id="" class="form-control" placeholder="Enter Confirm password">
                     <span class="text-danger">
-                        @error('email')
+                        @error('confirm_password')
                             {{$message}}
                         @enderror
                     </span>
@@ -76,7 +78,7 @@
                     <label for=""><b>Address</b><span class="text-danger">*</span></label>
                    <textarea name="address" class="form-control" id="" cols="5" rows="10">{{old('address')}}</textarea>
                    <span class="text-danger">
-                    @error('email')
+                    @error('address')
                         {{$message}}
                     @enderror
                 </span>
